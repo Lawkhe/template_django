@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'project',
     'project.applications.proyecto',
-    'project.applications.contacto'
+    'project.applications.contacto',
+    'project.applications.ubicaciones',
 ]
 
 MIDDLEWARE = [
@@ -131,4 +132,14 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'desarrollosaroa@gmail.com'
+EMAIL_HOST_PASSWORD = 'qcyhmuxdfvnmyflk'
+EMAIL_USE_TLS = True
+
+LOGIN_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'
