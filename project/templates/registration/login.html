@@ -53,7 +53,7 @@
         <div class="bg-light rounded-4 py-5 px-4 px-md-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
-                    <form method="POST">
+                    <form method="POST" action="{% url 'login' %}">
                         {% csrf_token %}
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
@@ -64,7 +64,7 @@
                         </div>
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" name="name" id="name" type="password" placeholder="Enter your name..." data-sb-validations="required" />
+                            <input class="form-control" name="password" id="password" type="password" placeholder="Enter your name..." data-sb-validations="required" />
                             <label for="name">Contraseña</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
