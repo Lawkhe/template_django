@@ -3,7 +3,7 @@ from django.views.decorators.cache import never_cache
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 
 @never_cache
 def page(request):
@@ -11,7 +11,7 @@ def page(request):
     return render(request, 'page/content.html', context=response)
 
 @never_cache
-def login(request):
+def login_view(request):
     response = {}
     if request.method == "POST":
         data = request.POST
@@ -32,11 +32,7 @@ def login(request):
                     response['status'] = 'success'
                     response['message'] = 'Login exitoso'
 
-                    request.session['user'] = {
-                        'id': user_val.id,
-                        'name': user_val.name,
-                    }
-                    response['session'] = request.session['user']
+                    login(request, user_val)
                     return HttpResponseRedirect('/projects/')
                
             except User.DoesNotExist:
