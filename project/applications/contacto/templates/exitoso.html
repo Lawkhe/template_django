@@ -1,0 +1,36 @@
+{% extends "layout/one.html" %}
+{% load static %}
+
+
+{% block title %}Contactos{% endblock %}
+
+
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block title_container %}Se han guardado los datos correctamente{% endblock %}
+
+
+{% block main %}
+
+    <!-- Contact form-->
+    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+        <div class="text-center mb-5">
+            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+            <h1 class="fw-bolder">Nuevo Contacto Agregado a la lista de Juan Jose Hernandez Cortecero</h1>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                Tu información fue recibida, pronto se comunicarán contigo.
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block js %} 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+{% endblock %}

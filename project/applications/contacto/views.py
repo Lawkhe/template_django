@@ -3,6 +3,7 @@ from .models import Contacto
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives, send_mail
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 @login_required
 def projects(request):
@@ -18,7 +19,13 @@ def projects(request):
         contacto_val.save()
 
         email_html('Bienvenido!', data)
+
+        return HttpResponseRedirect('/exitoso/')
     return render(request, 'contactos.html', context=response)
+
+@login_required
+def success(request):
+    return render(request, 'exitoso.html', context={})
 
 def email_html(subject, data):
     html_message = ('<div style="font-family: sans-serif; text-align:center; border: 1px solid #412378; margin-top: 30px;max-width: 550px;margin: 0 auto;">' +
