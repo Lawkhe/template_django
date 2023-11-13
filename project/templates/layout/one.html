@@ -35,6 +35,7 @@
                     <li class="nav-item"><a class="nav-link" href="/projects">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link" href="/contacts">Contactos</a></li>
                     <li class="nav-item"><a class="nav-link" href="/sitios">Mapa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ra">Realidad Aumentada</a></li>
                     {% if request.user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'exit' %}">Salir</a></li>
                     {% else %}
@@ -59,13 +60,25 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-xxl-8">
                 <div class="text-center my-5">
-                    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                    <p class="lead fw-light mb-4">My name is Start Bootstrap and I help brands grow.</p>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum itaque qui unde quisquam consequatur autem. Eveniet quasi nobis aliquid cumque officiis sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
+                    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Acerca de mí</span></h2>
+                    <p class="lead fw-light mb-4">
+                      Apasionado por el desarrollo de software con conocimiento en
+                      lenguajes de programación Python, PHP, JavaScript y Java. Llevo
+                      tres años desarrollando aplicaciones con PHP, Python y
+                      actualmente estoy trabajando con dos de su framework Django y
+                      Flask.
+                    </p>
+                    <p class="text-muted">
+                      Durante mis estudios adquirí conocimientos y habilidades para el
+                      análisis, diseño y desarrollo de software por medio de la aplicación
+                      de metodologías de desarrollo agiles y arquitecturas de software
+                      como MVC, Aparte de eso tengo las habilidades para diseñar y
+                      modelar bases de datos relacionales en los sistemas de gestión SQL
+                      Server y MySQL y no relacionales como MongoDB.
+                    </p>
                     <div class="d-flex justify-content-center fs-2 gap-4">
-                        <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-                        <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
-                        <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                        <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/juan-jose-hernandez-cortecero-b4115226b/"><i class="bi bi-linkedin"></i></a>
+                        <a class="text-gradient" target="_blank" href="https://github.com/Lawkhe"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>

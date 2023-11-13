@@ -29,4 +29,5 @@ urlpatterns = [
     path('', include('project.applications.proyecto.urls')),
     path('', include('project.applications.contacto.urls')),
     path('', include('project.applications.ubicaciones.urls')),
+    path('', include('project.applications.realidad_aumentada.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

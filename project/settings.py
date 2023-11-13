@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-m*uax&#fu*amtlm&t0bej7y5i^b8v0iz0n_l^phm*6_$eud0*y
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1'
+    '*'
 ]
 
 
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'project.applications.proyecto',
     'project.applications.contacto',
     'project.applications.ubicaciones',
+    'project.applications.realidad_aumentada',
 ]
 
 MIDDLEWARE = [
