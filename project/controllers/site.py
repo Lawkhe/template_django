@@ -15,19 +15,11 @@ def login_view(request):
     response = {}
     if request.method == "POST":
         data = request.POST
-        print('data')
         if 'email' in data and data['email'] != '' and 'password' in data and data['password'] != '':
             email = data['email']
             password = data['password']
             try:
-                # user = User.objects.create_user("john", "lennon@thebeatles.com", "johnpassword")
-                # u = User.objects.get(username="john")
-                # u.set_password("new password")
-                # u.save()
-
                 user_val = authenticate(username=email, password=password)
-                print('user_val:___:::::::::::::')
-                print(user_val)
                 if user_val is not None:
                     response['status'] = 'success'
                     response['message'] = 'Login exitoso'

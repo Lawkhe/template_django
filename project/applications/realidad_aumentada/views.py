@@ -8,5 +8,4 @@ def ra(request):
     elementos = list(Elemento.objects.all())
     random_elemento = random.choice(elementos)
     response = {'elemento': random_elemento}
-    print(random_elemento.id)
     return render(request, 'ra.html', context=response)
