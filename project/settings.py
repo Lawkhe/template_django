@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'project.applications.contacto',
     'project.applications.ubicaciones',
     'project.applications.realidad_aumentada',
+    'project.applications.movil',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
