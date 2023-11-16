@@ -26,6 +26,7 @@ urlpatterns = [
     path('exit/', site.exit, name="exit"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('login/', site.login_view, name="login"),
+    path('movil_sensor/', site.movil_sensor, name="Movil"),
     path('', include('project.applications.proyecto.urls')),
     path('', include('project.applications.contacto.urls')),
     path('', include('project.applications.ubicaciones.urls')),

@@ -4,6 +4,9 @@ from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
 
 @never_cache
 def page(request):
@@ -36,3 +39,18 @@ def login_view(request):
 def exit(request):
     logout(request)
     return redirect('login')
+
+@api_view(['POST'])
+def movil_sensor(request):
+    response = {"status": False}
+    status_response = status.HTTP_400_BAD_REQUEST
+    data = request.data
+    try:
+
+        response['status'] = True
+        response['data'] = "Juan"
+        status_response = status.HTTP_200_OK
+        
+    except Exception:
+        pass
+    return Response(response, status=status_response)
