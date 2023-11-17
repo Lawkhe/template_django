@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Temperatura
+from .models import Temperatura, Proximidad
 from django.contrib.auth.decorators import login_required
 
 from rest_framework.decorators import api_view
@@ -59,6 +59,25 @@ def movil_sensor(request):
         temperatura_val = Temperatura()
         temperatura_val.value = data['temperatura']
         temperatura_val.save()
+
+        response['status'] = True
+        status_response = status.HTTP_200_OK
+        
+    except Exception:
+        pass
+    return Response(response, status=status_response)
+
+
+@api_view(['POST'])
+def movil_sensor_pro(request):
+    response = {'status': False}
+    status_response = status.HTTP_400_BAD_REQUEST
+    data = request.data
+    try:
+
+        proximidad_val = Proximidad()
+        proximidad_val.value = data['proximidad']
+        proximidad_val.save()
 
         response['status'] = True
         status_response = status.HTTP_200_OK
